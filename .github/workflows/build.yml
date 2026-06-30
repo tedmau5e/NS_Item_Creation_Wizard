@@ -26,7 +26,8 @@ jobs:
             - name: Build with Pyinstaller
               run: |
                 rm -rf dist build
-                pyinstaller --clean main.spec 
+                pyinstaller --clean main.spec
+                ls -R dist
             
             - name: Upload artifact
               uses: actions/upload-artifact@v4
