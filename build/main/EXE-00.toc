@@ -1,5 +1,5 @@
 ('/Users/tedzarek/Documents/Item_Creation/build/main/main',
- True,
+ False,
  False,
  True,
  None,
@@ -57,8 +57,8 @@
  [],
  False,
  False,
- 1782828968,
- [('run',
-   '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/PyInstaller/bootloader/Darwin-64bit/run',
+ 1782831644,
+ [('runw',
+   '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/PyInstaller/bootloader/Darwin-64bit/runw',
    'EXECUTABLE')],
  '/Library/Frameworks/Python.framework/Versions/3.14/Python')
