@@ -1,7 +1,11 @@
 name: Build Workflow
 
+permissions:
+    contents: write
+
 on:
     push
+        #branches: master
 
 jobs:
     build-mac:
