@@ -47,5 +47,5 @@ jobs:
               with:
                 tag_name: ${{ github.ref_name }}
                 files: |
-                    dist/main
+                    dist/main.app
               
