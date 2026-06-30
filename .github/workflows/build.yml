@@ -25,6 +25,7 @@ jobs:
                 
             - name: Build with Pyinstaller
               run: |
+                rm -rf dist build
                 pyinstaller --clean main.spec 
             
             - name: Upload artifact
