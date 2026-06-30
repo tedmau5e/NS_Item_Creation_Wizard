@@ -33,7 +33,7 @@ jobs:
               uses: actions/upload-artifact@v4
               with:
                 name: Item_Creation-macos
-                path: /dist/main
+                path: /dist/main/main
             
             - name: Create Release
               id: create_release
@@ -49,5 +49,5 @@ jobs:
               with:
                 tag_name: ${{ github.ref_name }}
                 files: |
-                    dist/**/main.app
+                    dist/**/main
               
