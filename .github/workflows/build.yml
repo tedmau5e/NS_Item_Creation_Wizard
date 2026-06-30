@@ -25,7 +25,7 @@ jobs:
                 
             - name: Build with Pyinstaller
               run: |
-                pyinstaller main.spec --clean
+                pyinstaller --clean main.spec 
             
             - name: Upload artifact
               uses: actions/upload-artifact@v4
