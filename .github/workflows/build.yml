@@ -31,7 +31,7 @@ jobs:
               uses: actions/upload-artifact@v4
               with:
                 name: Item_Creation-macos
-                path: dist/
+                path: dist/main.app
             
             - name: Create Release
               id: create_release
