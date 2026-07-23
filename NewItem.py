@@ -338,6 +338,7 @@ class MatrixChild:
         else:
             self.filter_color_id = None
         self.oos_message = oos_message
+        
         if self.oos_message:
             self.oos_message_id = web_behavior[oos_message]
         else:
