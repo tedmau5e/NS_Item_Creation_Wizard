@@ -295,6 +295,19 @@ class MatrixParentWindow(tk.Toplevel):
         )
         self.vendor_check.grid(column=0, row=8, columnspan=5, padx=10, pady=10)
 
+        self.oos_message = tk.StringVar(self)
+        ttk.Label(self, text="Web Out of Stock Behavior").grid(
+            column=0, row=14, columnspan=5, padx=10, pady=10
+        )
+        self.oos_message_dropdown = ttk.Combobox(
+            self,
+            values=list(web_behavior.keys()),
+            textvariable=self.oos_message,
+            state="readonly",
+            width=40,
+        )
+        self.oos_message_dropdown.grid(column=0, row=15, columnspan=5, padx=10, pady=10)
+
         back_btn = ttk.Button(self, text="Back", command=lambda: go_back(self))
         back_btn.grid(column=0, row=50, columnspan=2, padx=10, pady=10)
 
@@ -332,6 +345,7 @@ class MatrixParentWindow(tk.Toplevel):
                 self.selected_prod_cat_id,
                 self.vendor.get(),
                 self.pref_vendor_check.get(),
+                self.oos_message.get(),
             )
             ItemOptionsWindow(self, parent_item, offset=40)
 
@@ -534,19 +548,6 @@ class ChildItemWindow(tk.Toplevel):
         self.base_price.trace_add("write", self.dept_price_calc)
         self.dept_price_entry.grid(column=3, row=12, columnspan=3, padx=10, pady=10)
 
-        self.oos_message = tk.StringVar(self.window)
-        ttk.Label(self.window, text="Web Out of Stock Behavior").grid(
-            column=0, row=14, columnspan=5, padx=10, pady=10
-        )
-        self.oos_message_dropdown = ttk.Combobox(
-            self.window,
-            values=list(web_behavior.keys()),
-            textvariable=self.oos_message,
-            state="readonly",
-            width=40,
-        )
-        self.oos_message_dropdown.grid(column=0, row=15, columnspan=5, padx=10, pady=10)
-
         self.filtered_color = tk.StringVar(self.window)
         ttk.Label(self.window, text="Filter Color").grid(
             column=0, row=17, columnspan=2, padx=10, pady=10
@@ -580,7 +581,6 @@ class ChildItemWindow(tk.Toplevel):
                 self.base_price_entry.get(),
                 self.dept_price_entry.get(),
                 self.filtered_color.get(),
-                self.oos_message.get(),
             ),
         )
         next_itm_btn.grid(column=2, row=50, columnspan=2, padx=10, pady=10)

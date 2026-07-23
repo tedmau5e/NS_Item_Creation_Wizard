@@ -93,6 +93,7 @@ def create_parent(
     item_prod_cat_id,
     item_vendor,
     pref_vendor,
+    oos_message,
 ):
     parent_item = MatrixParent(
         item_name,
@@ -102,6 +103,7 @@ def create_parent(
         item_prod_cat_id,
         item_vendor,
         pref_vendor,
+        oos_message,
     )
     parent_item.tax = set_tax_status(item_shop_id, item_prod_cat_id)
     parent_item.income_account, parent_item.income_acct_id = set_income_acct(
@@ -322,7 +324,6 @@ def next_child(
             base_price,
             dept_price,
             color_filter,
-            oos_message,
         )
         if not MatrixChild.check_child_fields(item):
             return

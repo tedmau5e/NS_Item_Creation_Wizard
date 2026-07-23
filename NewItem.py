@@ -126,7 +126,7 @@ class NewItem:
 
 class MatrixParent:
     def __init__(
-        self, name, department, category, dept_id, cat_id, vendor, pref_vendor
+        self, name, department, category, dept_id, cat_id, vendor, pref_vendor, oos_message,
     ):
         self.name = name
         self.department = department
@@ -147,8 +147,8 @@ class MatrixParent:
         self.matrix_type = "Parent Matrix Item"
         self.web_name = None
         self.web_desc = None
-        self.oos_message = None
-        self.oos_message_id = None
+        self.oos_message = oos_message
+        self.oos_message_id = web_behavior[oos_message]
         self.atp_qty = None
         self.filter_color = None
         self.filter_color_id = None
@@ -205,7 +205,6 @@ class MatrixChild:
         "vendor_code",
         "base_price",
         "dept_price",
-        "oos_message",
     ]
 
     def __init__(
@@ -244,8 +243,8 @@ class MatrixChild:
         self.filter_brand_id = None
         self.filter_color = None
         self.filter_color_id = None
-        self.oos_message = None
-        self.oos_message_id = None
+        self.oos_message = self.parent.oos_message
+        self.oos_message_id = self.parent.oos_message_id
         self.name = name
         self.color = color
         self.color_id = color_id
@@ -325,7 +324,6 @@ class MatrixChild:
         base_price,
         dept_price,
         filtered_color,
-        oos_message,
     ):
         self.upc = upc
         self.cost = cost
@@ -337,12 +335,6 @@ class MatrixChild:
             self.filter_color_id = color_filter[self.filter_color]
         else:
             self.filter_color_id = None
-        self.oos_message = oos_message
-        
-        if self.oos_message:
-            self.oos_message_id = web_behavior[oos_message]
-        else:
-            self.oos_message_id = None
         return self
 
     def update_attributes(self):
