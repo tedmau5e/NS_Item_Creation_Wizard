@@ -39,7 +39,7 @@ def create_standalone(
 ):
 
     if all(
-        v is None
+        v is not None
         for v in (
             item_name,
             item_upc,

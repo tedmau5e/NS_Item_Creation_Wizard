@@ -28,6 +28,7 @@ vendor_list = {
     "Creative Knitwear Inc": "24657",
     "Crew Dog LLC": "239534",
     "Cutter & Buck": "24817",
+    "Design Design Inc": "288112",
     "D&H Distributing Company": "24595",
     "Dissent Pins": "24884",
     "DormCo": "1234",
@@ -1825,4 +1826,6 @@ namedrop_options = {
     "Wrestling": "37",
 }
 
-other_options = {}
+other_options = {
+    
+}
