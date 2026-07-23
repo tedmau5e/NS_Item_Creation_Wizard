@@ -1624,7 +1624,7 @@ color_options = {
     "White/Black Dot": "697",
     "Yellow": "264",
     "Yellow Lemon": "265",
-    "Zinc Gray": "266"
+    "Zinc Gray": "266",
 }
 
 size_options = {
@@ -1668,7 +1668,7 @@ size_options = {
     "Head 1SFA": "236",
     "Head Infant ISFA": "237",
     "Head Toddler ISFA": "238",
-    "Head Child/Youth ISFA" : "239",
+    "Head Child/Youth ISFA": "239",
     "Waist 30": "252",
     "Waist 32": "253",
     "Waist 33": "254",
@@ -1742,7 +1742,7 @@ size_options = {
     "Womens M/L": "770",
     "Womens XL/XXL": "771",
     "46mm": "772",
-    "XXX Small": "773"
+    "XXX Small": "773",
 }
 
 logo_options = {
@@ -1766,7 +1766,7 @@ logo_options = {
     "UNIVERSITY LOGOS": "531",
     "Vintage": "326",
     "Winky Bear": "534",
-    "Wordmark": "327"
+    "Wordmark": "327",
 }
 
 namedrop_options = {
@@ -1822,9 +1822,7 @@ namedrop_options = {
     "Track Field": "34",
     "Volleyball": "35",
     "Water Polo": "36",
-    "Wrestling": "37"
+    "Wrestling": "37",
 }
 
-other_options = {
-    
-}
+other_options = {}

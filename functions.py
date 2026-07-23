@@ -395,7 +395,6 @@ def create_df(new_item, app):
             "filter_brand_id",
             "page_title",
             "meta_tag",
-            "url_component",
             "web_image_name",
         ]
     ]
